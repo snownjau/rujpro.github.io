@@ -27,23 +27,18 @@ window.onresize = function() {
         fuckyou();
     }
 };
-document.onkeydown = function(e) {
-    // if ((event.ctrlKey) && (event.keyCode == 115 || event.keyCode == 83 || event.keyCode == 46)) {
-    //     event.returnValue = false;
-    //     return false;
-    // }
+document.onkeydown = function() {
     var e = window.event || arguments[0];
-    //F12
-    if(e.keyCode == 123){
+    if ((e.ctrlKey) && (e.keyCode == 115 || e.keyCode == 83 || e.keyCode == 46 || e.keyCode == 123 || e.keyCode == 85)) {
+        e.returnValue = false;
         return false;
-    //Ctrl+Shift+I
-    }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+    }
+   if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+        e.returnValue = false;
         return false;
     //Shift+F10
     }else if((e.shiftKey) && (e.keyCode == 121)){
-        return false;
-    //Ctrl+U
-    }else if((e.ctrlKey) && (e.keyCode == 85)){
+        e.returnValue = false;
         return false;
     }
 };
