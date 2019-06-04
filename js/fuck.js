@@ -33,11 +33,15 @@ document.onkeydown = function() {
         e.returnValue = false;
         return false;
     }
+    //Ctrl+Shift+I
    if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
         e.returnValue = false;
         return false;
     //Shift+F10
     }else if((e.shiftKey) && (e.keyCode == 121)){
+        e.returnValue = false;
+        return false;
+    }else if(e.keyCode == 123){
         e.returnValue = false;
         return false;
     }
