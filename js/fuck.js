@@ -1,4 +1,3 @@
-// 禁止右键粘贴复制保存
 function fuckyou() {
     window.close();
     window.location = "https://www.baidu.com/";
@@ -48,6 +47,7 @@ document.onkeydown = function(e) {
         return false;
     }
 };
+// 禁止右键粘贴复制保存
 document.oncontextmenu = function(e) {
     e.returnValue = false;
 };
